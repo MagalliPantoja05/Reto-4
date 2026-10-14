@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora básica</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <div class="calculator-container">
+            <h1 class="calculator-title">Calculadora básica</h1>
+
+            <!-- Display -->
+            <input type="text" id="display" class="calculator-display" readonly value="0">
+
+            <!-- Botones -->
+            <div class="calculator-buttons">
+                <!-- Fila 1: Controles -->
+                <button class="btn btn-clear" onclick="clearDisplay()">C</button>
+                <button class="btn btn-operator" onclick="appendOperator('/')">&divide;</button>
+                <button class="btn btn-operator" onclick="appendOperator('*')">&times;</button>
+                <button class="btn btn-clear" onclick="deleteLast()">DEL</button>
+
+                <!-- Fila 2: Números 7, 8, 9 y Suma -->
+                <button class="btn btn-number" onclick="appendNumber('7')">7</button>
+                <button class="btn btn-number" onclick="appendNumber('8')">8</button>
+                <button class="btn btn-number" onclick="appendNumber('9')">9</button>
+                <button class="btn btn-operator btn-plus" onclick="appendOperator('+')">+</button>
+
+                <!-- Fila 3: Números 4, 5, 6 y Resta -->
+                <button class="btn btn-number" onclick="appendNumber('4')">4</button>
+                <button class="btn btn-number" onclick="appendNumber('5')">5</button>
+                <button class="btn btn-number" onclick="appendNumber('6')">6</button>
+                <button class="btn btn-operator btn-rest" onclick="appendOperator('-')">-</button>
+
+                <!-- Fila 4: Números 1, 2, 3 y Igual -->
+                <button class="btn btn-number" onclick="appendNumber('1')">1</button>
+                <button class="btn btn-number" onclick="appendNumber('2')">2</button>
+                <button class="btn btn-number" onclick="appendNumber('3')">3</button>
+                <button class="btn btn-equal" onclick="calculateResult()">=</button>
+
+                <!-- Fila 5: Número 0 y Punto decimal -->
+                <button class="btn btn-number btn-zero" onclick="appendNumber('0')">0</button>
+                <button class="btn btn-number" onclick="appendDecimal('.')">.</button>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
